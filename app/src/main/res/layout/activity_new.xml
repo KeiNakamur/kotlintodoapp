@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".NewActivity">
+
+    <ImageView
+        android:id="@+id/close_image"
+        android:layout_width="24sp"
+        android:layout_height="24sp"
+        android:src="@drawable/close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/newText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新規作成"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@+id/close_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#292D361A"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/newText"/>
+
+    <TextView
+        android:id="@+id/firstTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="タスク名"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/etTask"
+        android:layout_width="342sp"
+        android:layout_height="60sp"
+        android:background="@drawable/edittext"
+        android:hint="20文字以内で入力してください"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/firstTask"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="期限"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/etTask"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/etDeadline"
+        android:layout_width="342sp"
+        android:layout_height="60sp"
+        android:background="@drawable/edittext"
+        android:hint="年/月/日"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/deadline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="カテゴリー"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/etDeadline"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="342sp"
+        android:layout_height="60sp"
+        android:background="@drawable/edittext"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/category"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="詳細"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="342sp"
+        android:layout_height="60sp"
+        android:background="@drawable/edittext"
+        android:hint="入力してください"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/btnDisabled"
+        android:layout_width="342sp"
+        android:layout_height="60sp"
+        android:src="@drawable/disabled"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnBlue"
+        android:layout_width="342sp"
+        android:layout_height="60sp"
+        android:background="#2654CB"
+        android:textColor="@color/white"
+        android:text="作成する"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
